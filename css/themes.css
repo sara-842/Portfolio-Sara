@@ -1,0 +1,37 @@
+:root {
+  color-scheme: dark;
+  --bg: #080910;
+  --surface: rgba(18, 20, 32, .72);
+  --glass: rgba(255, 255, 255, .075);
+  --line: rgba(255, 255, 255, .16);
+  --shine: rgba(255, 255, 255, .28);
+  --text: #fbfbff;
+  --muted: #b6b8c8;
+  --accent: #ff4d8d;
+  --accent-2: #6ee7f9;
+  --accent-gradient: linear-gradient(135deg, #ff4d8d, #7c3aed 50%, #06b6d4);
+  --glow: rgba(255, 77, 141, .28);
+  --grid: rgba(255, 255, 255, .045);
+  --particle: rgba(255, 255, 255, .65);
+  --shadow: rgba(0, 0, 0, .28);
+  --mouse-x: 50vw;
+  --mouse-y: 50vh;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f8f7f3;
+  --surface: rgba(255, 255, 255, .74);
+  --glass: rgba(255, 255, 255, .58);
+  --line: rgba(17, 24, 39, .12);
+  --shine: rgba(255, 255, 255, .78);
+  --text: #111827;
+  --muted: #5f6574;
+  --accent: #c026d3;
+  --accent-2: #0f766e;
+  --accent-gradient: linear-gradient(135deg, #c026d3, #2563eb 55%, #0f766e);
+  --glow: rgba(37, 99, 235, .22);
+  --grid: rgba(17, 24, 39, .055);
+  --particle: rgba(17, 24, 39, .42);
+  --shadow: rgba(17, 24, 39, .12);
+}
+::selection { background: var(--accent); color: #fff; }

@@ -1,0 +1,113 @@
+@media (max-width: 1200px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 980px) {
+  .hero-grid, .two-col, .contact-grid { grid-template-columns: 1fr; }
+  .hero { min-height: auto; }
+  .designer-card { min-height: 420px; }
+  .service-grid, .project-grid, .testimonial-track, .gallery-grid, .award-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-strip { grid-template-columns: repeat(2, 1fr); }
+  .process { grid-template-columns: repeat(3, 1fr); }
+  /* .service-detail is now flex, no grid override needed */
+  .project-nav { flex-wrap: wrap; justify-content: center; }
+  .project-nav-link { min-width: 140px; flex: 1; }
+  .showcase-images { gap: 18px; }
+}
+@media (max-width: 720px) {
+  .container { width: min(100% - 28px, 1160px); }
+  .section { padding: 70px 0; }
+  .site-nav { border-radius: 28px; align-items: flex-start; }
+  .brand strong { display: none; }
+  .menu-toggle { display: block; }
+  .nav-menu {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    display: none;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: var(--surface);
+    backdrop-filter: blur(20px);
+  }
+  .nav-menu.open { display: grid; }
+  .nav-link { display: block; }
+  .hero { padding-top: 120px; }
+  h1 { font-size: clamp(2.65rem, 16vw, 4.2rem); }
+  h2 { font-size: clamp(2rem, 11vw, 3rem); }
+  .services-page-title h1 { font-size: clamp(1.8rem, 10vw, 2.4rem); }
+  .portfolio-page-title h1 { font-size: clamp(2rem, 8vw, 2.4rem); }
+  .service-grid, .project-grid, .testimonial-track, .gallery-grid, .award-grid, .stats-strip, .process { grid-template-columns: 1fr; }
+  .toolbar { display: grid; }
+  .search-wrap, .search-wrap:focus-within { max-width: 100%; margin-bottom: 12px; }
+  .toolbar input { width: 100%; }
+  /* Scrollable tabs on mobile to prevent overflow */
+  .tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tabs button, .tabs a { white-space: nowrap; flex-shrink: 0; }
+  .section-head.split { display: grid; }
+  .lightbox-nav { width: 44px; height: 44px; }
+  .lightbox-nav.prev { left: 10px; }
+  .lightbox-nav.next { right: 10px; }
+  .lightbox-close { top: 12px; right: 12px; width: 40px; height: 40px; }
+  .lightbox-caption {
+    width: calc(100% - 32px);
+    max-width: 320px;
+    padding: 8px 16px;
+    bottom: 16px;
+    justify-content: center;
+  }
+  .lightbox-title {
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .mouse-glow, .cursor-dot, .cursor-ring { display: none; }
+  .back-top, .whatsapp-float { right: 14px; }
+  .profile-image { width: min(220px, 60vw); height: min(220px, 60vw); }
+  .showcase-hero { padding: 120px 0 40px; }
+  .showcase-images { gap: 14px; }
+  .showcase-image-wrap { border-radius: 10px; }
+  .project-nav { flex-direction: column; }
+  .project-nav-link { min-width: 100%; text-align: center !important; }
+  .project-nav-link.next { text-align: center; }
+  .editorial-bio { padding: 32px 24px; }
+  .process-arrow { display: none; }
+  .process-step .glass-card { min-width: 100%; }
+  
+  /* Contact page overrides */
+  .contact-header { margin-bottom: 30px; }
+  .contact-grid { gap: 30px; }
+  .contact-form { padding: 24px; gap: 20px; }
+  .cta-card { padding: 40px 20px; }
+  .contact-card { padding: 18px; gap: 16px; }
+  .card-icon { width: 40px; height: 40px; border-radius: 10px; }
+  .card-icon svg { width: 20px; height: 20px; }
+  .card-value { font-size: 1.05rem; }
+}
+/* ── Very small screens ── */
+@media (max-width: 380px) {
+  .container { width: calc(100% - 20px); }
+  .hero { padding-top: 100px; }
+  .page-top { padding-top: 120px; }
+  .designer-card { min-height: 380px; padding: 24px; }
+  .mini-stats { width: calc(100% - 40px); gap: 6px; }
+  .mini-stats span { padding: 8px; font-size: .75rem; }
+  .mini-stats strong { font-size: 1.1rem; }
+  .btn { min-height: 44px; padding: 0 14px; font-size: .88rem; }
+  
+  /* Contact page micro overrides */
+  .contact-card { padding: 14px; gap: 12px; }
+  .card-value { font-size: 0.9rem; }
+  
+  /* Services page micro overrides */
+  .service-detail { padding: 24px; }
+  .service-detail-list { gap: 24px; }
+}

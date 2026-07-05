@@ -1,0 +1,102 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--bg); color: var(--text); }
+body {
+  margin: 0;
+  font-family: "DM Sans", "Segoe UI", system-ui, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 15% 50%, rgba(255, 77, 141, 0.05), transparent 40vw),
+    radial-gradient(circle at 85% 30%, rgba(99, 102, 241, 0.05), transparent 40vw),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    var(--bg);
+  background-size: 100% 100%, 100% 100%, 56px 56px, 56px 56px, 100% 100%;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  opacity: .18;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+a { color: inherit; text-decoration: none; }
+button, input, textarea { font: inherit; }
+button { cursor: pointer; }
+img { max-width: 100%; display: block; }
+.container { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+.section { padding: 100px 0; }
+.section-band { position: relative; overflow: hidden; }
+h1, h2, h3 { font-family: "Syne", "Segoe UI", system-ui, sans-serif; letter-spacing: 0; margin: 0; line-height: .98; text-wrap: balance; }
+h1 { font-size: clamp(3.1rem, 8vw, 7.8rem); }
+h2 { font-size: clamp(2.2rem, 5vw, 4.7rem); }
+h3 { font-size: 1.35rem; line-height: 1.1; }
+p { color: var(--muted); line-height: 1.7; max-width: 72ch; }
+.eyebrow, .badge {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--accent);
+  background: var(--glass);
+  box-shadow: inset 0 1px 0 var(--shine);
+  font-size: .78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.section-head { max-width: 760px; margin-bottom: 36px; }
+.section-head.split { max-width: none; display: flex; justify-content: space-between; gap: 24px; align-items: end; }
+.page-top { padding-top: 150px; min-height: 100vh; }
+.page-title { max-width: 980px; margin-bottom: 44px; }
+.button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.btn {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 24px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-weight: 800;
+  position: relative;
+  overflow: hidden;
+  transition: transform .3s cubic-bezier(0.16, 1, 0.3, 1), border-color .3s ease, background .3s ease, box-shadow .3s ease;
+}
+.btn span { position: relative; z-index: 2; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+.btn .cta-arrow { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); display: inline-block; }
+.btn:hover { transform: translateY(-4px); box-shadow: 0 10px 30px var(--shadow); border-color: rgba(255,255,255,0.2); }
+.btn:hover .cta-arrow { transform: translateX(6px); }
+
+.btn.primary { 
+  background: var(--accent-gradient); 
+  color: #fff; 
+  border-color: transparent; 
+  box-shadow: 0 18px 50px var(--glow); 
+}
+.btn.primary::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transition: left 0.6s ease;
+  z-index: 1;
+}
+.btn.primary:hover::before { left: 100%; }
+.btn.primary:hover { box-shadow: 0 24px 60px var(--glow), 0 0 20px rgba(255,77,141,0.4); }
+
+.btn.ghost { background: var(--glass); }
+.btn.ghost:hover { background: rgba(255,255,255,0.08); }
+.btn.subtle { color: var(--muted); }
+.btn.subtle:hover { color: var(--text); }
+.text-link { color: var(--accent); font-weight: 800; }
+.particle-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .45; }
+#app-shell, #app { position: relative; z-index: 3; }
