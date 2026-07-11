@@ -177,6 +177,86 @@ const portfolioData = {
             { filename: "project-print-1.png", width: 800, height: 600 },
             { filename: "project-print-2.png", width: 800, height: 600 }
           ]
+        },
+        {
+          slug: "german-company-business-card",
+          title: "German Company Business Card",
+          client: "German Company",
+          description: "Professional corporate business card design featuring branding elements for an industrial bearings distributor.",
+          images: [
+            { filename: "print-german-company-business-card.jpg", width: 800, height: 600 }
+          ]
+        },
+        {
+          slug: "tip-top-cafe-cover",
+          title: "Tip Top Café Cover Design",
+          client: "Tip Top Café",
+          description: "Premium café menu cover design created for Tip Top Café with a modern luxury coffeehouse visual identity.",
+          images: [
+            { filename: "tip-top-cafe-cover.png", width: 800, height: 600 }
+          ]
+        },
+        {
+          slug: "tip-top-cafe-hot-drinks-menu",
+          title: "Tip Top Café Hot Drinks Menu",
+          client: "Tip Top Café",
+          description: "Elegant and structured hot drinks menu design featuring premium coffee and tea selections for Tip Top Café.",
+          images: [
+            { filename: "tip-top-cafe-hot-drinks-menu.png", width: 800, height: 600 }
+          ]
+        },
+        {
+          slug: "tip-top-cafe-cold-drinks-menu",
+          title: "Tip Top Café Cold Drinks Menu",
+          client: "Tip Top Café",
+          description: "Refreshing cold drinks and milkshake menu design tailored for Tip Top Café's premium beverage collection.",
+          images: [
+            { filename: "tip-top-cafe-cold-drinks-menu.png", width: 800, height: 600 }
+          ]
+        },
+        {
+          slug: "tip-top-cafe-desserts-menu",
+          title: "Tip Top Café Desserts Menu",
+          client: "Tip Top Café",
+          description: "Appetizing desserts, smoothies, and mocktails menu design showcasing Tip Top Café's sweet offerings.",
+          images: [
+            { filename: "tip-top-cafe-desserts-menu.jpg", width: 800, height: 600 }
+          ]
+        }
+      ]
+    },
+    {
+      id: "educational",
+      name: "Educational",
+      folder: "educational",
+      cover: "educational/educational-science-physics-course.jpg",
+      projects: [
+        {
+          slug: "science-physics-course-poster",
+          title: "Science & Physics Course Poster",
+          client: "Mr. Mohamed Hassan",
+          description: "Creative promotional poster for a science and physics educational course, designed to engage students.",
+          images: [
+            { filename: "educational-science-physics-course.jpg", width: 800, height: 600 }
+          ]
+        },
+        {
+          slug: "science-revision-youtube-thumbnail",
+          title: "Science Revision YouTube Thumbnail",
+          client: "Dr. Rana Sayed Amin",
+          description: "Engaging YouTube thumbnail and social media post designed for an online educational science revision series.",
+          images: [
+            { filename: "educational-science-revision-post.jpg", width: 800, height: 600 }
+          ]
+        },
+        {
+          slug: "science-physics-promo-poster",
+          title: "Science & Physics Promo Poster",
+          client: "Mr. Mohamed Hassan",
+          description: "Dynamic promotional artwork for a specialized physics and integrated science educational program.",
+          images: [
+            { filename: "educational-science-physics-promo.jpg", width: 800, height: 600 }
+          ]
         }
       ]
     }
